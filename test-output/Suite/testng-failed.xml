@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="listeners.Listeners"/>
+  </listeners>
+  <test parallel="tests" name="FourTest(failed)">
+    <classes>
+      <class name="tests.FourTest">
+        <methods>
+          <include name="testFour"/>
+          <include name="closingbrowser"/>
+        </methods>
+      </class> <!-- tests.FourTest -->
+    </classes>
+  </test> <!-- FourTest(failed) -->
+  <test parallel="tests" name="ThreeTest(failed)">
+    <classes>
+      <class name="tests.ThreeTest">
+        <methods>
+          <include name="closingbrowser"/>
+          <include name="testFour"/>
+        </methods>
+      </class> <!-- tests.ThreeTest -->
+    </classes>
+  </test> <!-- ThreeTest(failed) -->
+  <test parallel="tests" name="TwoTest(failed)">
+    <classes>
+      <class name="tests.TwoTest">
+        <methods>
+          <include name="testTwo"/>
+          <include name="closedriver"/>
+        </methods>
+      </class> <!-- tests.TwoTest -->
+    </classes>
+  </test> <!-- TwoTest(failed) -->
+  <test parallel="tests" name="LoginTest(failed)">
+    <classes>
+      <class name="tests.LoginTest">
+        <methods>
+          <include name="login"/>
+          <include name="openApplication"/>
+          <include name="openApplication"/>
+          <include name="closure"/>
+        </methods>
+      </class> <!-- tests.LoginTest -->
+    </classes>
+  </test> <!-- LoginTest(failed) -->
+</suite> <!-- Failed suite [Suite] -->
